@@ -1,0 +1,15 @@
+{
+  "name": "Front and Tips n Trick slide deck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fedtips"
+  },
+  "author": "Damon Muma",
+  "license": "ISC"
+}

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>tips N tricks of FrontEnd</title>
+
+  <meta name="description" content="Slidedeck TipsNTricks thing">
+  <meta name="author" content="Damon Muma">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/grobinger.css" id="theme">
+  <style>
+
+  </style>
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<section class="slides">
+
+
+<section>
+  <section class="centered">
+    <img src="./img/fedldn.png">
+    <h3>London Front-end Development Meetup</h3></section>
+  <section>👥 Organizers: Damon Muma, Emily Wyss, Scott Blinch</section>
+  <section>📅 Next meetup: April 26</section>
+  <section>Devldn slack: https://devldn.ca/ </section>
+  <section>We always like feedback and speakers!</section>
+
+</section>
+
+
+<section>
+  <section><h1>Top Twenty Everything!</h1><h2>🎉🎊🎉 🏅🎉</h2><h3>Tips N tricks from the frontlines of front-end</h3>
+  </section>
+
+  <section><h2>“Damon Muma”</h2><br/>
+    <h3><i class="fa fa-twitter" aria-hidden="true"></i> @thedamon</h3>
+    <p>Senior Front End Developer <br><small>← Front End Development ← Technology ← Strategic Customer Marketing ← </small><br>(London Life / Canada Life / Great-West Life)</p>
+  </section>
+  <section>
+    <h2>What you should expect to get from this presentation</h2>
+    <p>1. nothing</p>
+    <p>2. beauty is in the eye of the beholder</p>
+    <p>3. slightly obvious → really obvious</p>
+  </section>
+</section>
+
+
+
+
+
+
+<section>
+  <section><h1>HTML 🌳</h1></section>
+  <section><p>Markdown</p></section>
+  <section><p>Pug 🐶 / Jade 💎</p></section>
+  <section><p>Emmet (🙏 Scott 🎉)</p></section>
+</section>
+<section>
+  <section><h1>CSS / SASS 🎨</h1></section>
+  <section><p>vertically center things with flexbox (🙏 LadyCarni 🎉)</p></section>
+  <section><p>Don't use underscores ever in SASS</p></section>
+  <section><p>Don't separate media queries from related ones</p></section>
+  <section><p>Group related rules … ie … ones likely to change each other.</p></section>
+  <section><p>Really really responsive design  <br><pre><code data-trim>calc(px + vw)</code></pre></p></section>
+  <section><p>Consider putting a comment anytime use a size value that isn’t a variable <pre><code data-trim>$header-height - $header-spacing</code></pre></p></section>
+  <section><p>SASS can do more than we usually do:<br>Functions, loops, variable as property, maps.</p></section>
+</section>
+<section>
+  <section><h1>Accessibility 👨‍👩‍👧‍👦</h1></section>
+  <section><p>Color contrast checker in Chrome!</p></section>
+  <section><p>Negative dollar amounts.</p>
+    -$10 🆚 $-10 🆚 $−10</section>
+  <section><p>Avoid Ariaitis (swollen arias in your code) </p></section>
+  <section><p>Be aware the accessibility API.<br><br> accName = label<br> accDescription = desribed-by</p></section>
+  <section>
+    <pre><code>
+<label for="mango">banana</label>
+<input aria-label="orange" 
+       aria-labelledby="apple" 
+       type="text" 
+       id="mango">
+<span id="apple">pear</span>
+  </code></pre></section>
+  <section><p>You can use VoiceOver on your mac! Or NVDA on Windows</p></section>
+  <section><p>Accessibility inspector on Mac<br>(Inside Xcode)</p></section>
+</section>
+<section>
+  <section><h1>Javascript ☕️🖋</h1></section>
+  <section><p>Vue is nice. React is nice.<br>(hey DOM, 🤫)</p></section>
+  <section><p>EsNext via Babel or whatever</p></section>
+  <section><p>Prettier.js 🎨</p></section>
+  <section><p>Unit test your code or pretend your code is being unit tested.</p></section>
+  <section><p>Jest is nice.</p></section>
+  <section><p>Use custom events!</p></section>
+  <section><p>Throw exceptions!</p></section>
+  <section><p>Ternary expressions (🙏 Jenna 🎉)<pre><code data-trim>const display = hideMe() ? false : true;</code></pre></p></section>  
+  <section><p>Fallback assignment (🙏 Jenna 🎉)<pre><code data-trim>const variable = foo || fooDefault</code></pre></p></section>  
+  <section><p>The Great Override Config Object<br><pre><code data-trim>
+    Object.assign({},defaultOptions,customOptions)
+    // (or deepmerge)
+  </code></pre></p></section>  
+</section>
+<section>
+  <section><h1>CLI 📠</h1></section>
+  <section><p>Control + R : search through everything you’ve ever typed</p></section>
+  <section><p>Ctrl + → : forward a word.</p></section>
+  <section><p><pre><code data-trim>sudo !!</code></pre>repeat the last command</p></section>
+  <section><pre><code data-trim>foo && say “success” || say “failed”</code></pre></section>
+  <section><p>$ vi .bashrc / .zshrc</p></section>
+  <section><p>Git checkout -, cd -</p></section>
+  <section><p>Namespace your branch names to find them more easily</p></section>
+  <section><p>Pimp your terminal</p></section>
+  <section><p>Warpdirectory: wd projectname</p></section>
+  <section><p>Make it look pretty! (thanks <a href=" https://commandlinepoweruser.com/">Wes</a>)</p></section>
+</section>
+<section>
+  <section><h1>Nodes n that 🔋</h1></section>
+  <section><p>Package.json driven development</p></section>
+  <section><p>Look up a package on npm and the readme it shows you will be for the version that gets installed when you run npm install. Github? Not necessarily!</p></section>
+  <section><p>You can pass parameters through an npm task with --: 
+    <pre>
+      <code>
+npm run test -- --watch
+//or
+npm test --watch
+//or
+yarn test --watch
+      </code>
+    </pre></p></section>
+  <section><p>NPX
+    <pre><code>node_modules/.bin/prettier **/*.scss --write</code></pre>
+    vs
+    <pre><code>npx prettier **/*.scss --write</code></pre>
+    think of the hours you could save 🤑
+  </p></section>
+  <section><p>Webpack</p></section>
+</section>
+<section>
+  <section><h1>VSCode Extensions 💎</h1><p>sorry</p></section>
+  <section><p>💎 Bracket pair colorizor (🙏 Marty! 🎉)</p>
+    <pre><code data-no-escape>
+      export const streamedModelById = (db: Cot, docId: string): Observable<CouchModel> => storedModelById(db, docId)
+        .concat(db.dbFeed().filter(doc => docId === doc._id))
+        .combineLatest(db.allEvents(), (model, events) => routes[routeByDocPrefix(docId.split(':')[1])].applyEventsToModels(events, [model]))
+        .map(docs => docs.filter(doc => doc._id === docId)[0]);
+      </code></pre>
+    </section>
+    <section><p>💎 Sublime Text Keymap</p></section>
+    <section><p>💎 Import cost</p></section>
+    <section><p>💎 Change-case</p></section>
+    <section><p>💎 Copy Relative Path</p></section>
+    <section><p>💎 Quokka.js</p></section>
+    <section><p>💎 Subword navigation</p></section>
+    <section><p>💎 Codebucket</p></section>
+    <section><p>💎 Descriptions in package.json (with npm support)</p></section>
+  <section><p>Multiple cursors!</p></section>
+  <section><p>Forget the file tree!</p></section>
+</section>
+<section>
+  <section><h1>AnyOs 💻</h1></section>
+  <section><p>Clipboard manager</p></section>
+  <section><h1>🍎 MacOs 🔥</h1></section>
+  <section><p>Measure things with Cmd+control+shift+4</p></section>
+  <section><p>ctrl+scroll</p></section>
+  <section><p>Emoji! (mac: Cmd + Ctrl + Space) (🙏 Emily 🎉)</p></section>
+  <section><p>Math in spotlight 📟</p></section>
+  <section><p>Love the command pallette? Every mac app sort of has one:</p><h2>Cmd+?</h2></section>
+  <section><p>[alt ⌥]+[cmd ⌘]+[H]</p></section>
+  <section><p><a href="https://github.com/cscuderi/dotfiles">dotfiles</a>! (🙏 Carlin 🎉) </p></section>
+</section>
+<section>
+  <section><h1>Devtools 🛠</h1></section>
+  <section><p>Set zoom in responsive mode when you don’t have external monitors.</p></section>
+  <section><p>Log your xhttp requests</p></section>
+  <section><p>Break on… attribute modifications :O ?</p></section>
+  <section><p>Color picker (🙏 Travis 🎉)</p></section>
+  <section><p>copy(var) (🙏 Marty 🎉)</p>
+  <p style="font-size:80%">Copy any expression result in the Chrome or Firefox dev tools: <pre><code>copy(['a,b,c'].split(','))</code></pre> to get the actual array you can paste anywhere you like. Or if you've previously run an expression, and want the result without re-running it, use <pre><code>copy($_)</code></pre></p>
+  </section>
+</section>
+<section>
+  <section><h1>General 😸</h1></section>
+  <section><p>Provide a comment anytime you use a regexp or what appears to be an arbitrary value</p></section>
+  <section><p>Treat your code and process like a UX project where the users are other developers</p></section>
+  <section><p>Don’t be hard on yourself, but be just a tiny bit hard on yourself.</p></section>
+  <section><p>As developers we live in the hard things, it can be demoralizing or frustrating. That’s good, it means you want to get better.</p></section>
+  <section><p>Take a break if you’re going in circles. Let it coagulate. Take a step back.</p></section>
+  <section><p>Rubberducking: explain your problem to a coworker, your mom, your coffeecup, or a rubber duck.</p></section>
+  <section><p>Quit while you’re in the middle of something to start the day hungry</p></section>
+  <section><p>Embrace failure and ignorance, don’t be a afraid to say you don’t know or ask for help.</p></section>
+  <section><p>👋</p></section>
+</section>
+</section>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+
+transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+// Optional reveal.js plugins
+dependencies: [
+{
+  src: 'lib/js/classList.js', condition: function () {
+    return !document.body.classList;
+  }
+},
+{
+  src: 'plugin/markdown/marked.js', condition: function () {
+    return !!document.querySelector('[data-markdown]');
+  }
+},
+{
+  src: 'plugin/markdown/markdown.js', condition: function () {
+    return !!document.querySelector('[data-markdown]');
+  }
+},
+{
+  src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+    hljs.initHighlightingOnLoad();
+  }
+},
+{src: 'plugin/zoom-js/zoom.js', async: true},
+{src: 'plugin/notes/notes.js', async: true}
+]
+});
+
+</script>
+</body>
+</html>
